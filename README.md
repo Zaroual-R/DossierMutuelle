@@ -52,13 +52,16 @@ Ce projet est une application batch développée avec **Spring Batch**, qui auto
    git clone https://github.com/votre-utili
    sateur/gestion-dossiers-mutuelle.git
    cd gestion-dossiers-mutuelle
-2-Installer les dépendances Maven
+2-Installer les dépendances Maven:
+  ```bash
    mvn clean install
-3-Modifications des fichiers de configuration
+3-Modifications des fichiers de configuration:
    Selon votre environnement, vous pourriez avoir besoin de modifier certains fichiers de configuration :
    Le fichier application.properties pour configurer la base de données ou d'autres paramètres.
    Le chemin vers les fichiers JSON ou CSV dans le projet.
-4-Exécuter l'application avec Maven
+4-Exécuter l'application avec Maven:
+```bash
    mvn spring-boot:run
 ## Auteur
+
 Projet développé dans le cadre d'un mini-projet universitaire sur l'architecture logicielle (2024/2025).
