@@ -11,7 +11,7 @@ Ce projet est une application batch développée avec **Spring Batch**, qui auto
 ## Structure des données
 
 ### Exemple de fichier JSON d'entrée
-```json
+ ```json
 {
   "nomAssure": "Ibrahimi",
   "numeroAffiliation": "AFF123456",
