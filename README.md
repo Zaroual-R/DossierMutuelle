@@ -8,7 +8,30 @@ Ce projet est une application batch développée avec **Spring Batch**, qui auto
 
 1. **Lecture des dossiers** :
    - Lecture des données JSON avec un `JsonItemReader`.
-   - Lecture des données CSV avec un `FlatFileItemReader`.
+## Structure des données
+
+### Exemple de fichier JSON d'entrée
+```json
+{
+  "nomAssure": "Ibrahimi",
+  "numeroAffiliation": "AFF123456",
+  "immatriculation": "IMM098765",
+  "lienParente": "fils",
+  "montantTotalFrais": 150.0,
+  "prixConsultation": 50.0,
+  "nombrePiecesJointes": 3,
+  "nomBeneficiaire": "Omar",
+  "dateDepotDossier": "2024-11-10",
+  "traitements": [
+    {
+      "codeBarre": "1234567890",
+      "existe": true,
+      "nomMedicament": "Paracétamol",
+      "typeMedicament": "Antalgique",
+      "prixMedicament": 5.0
+    }
+  ]
+}
 
 2. **Validation des données** :
    - Vérifie que les informations essentielles (nom de l'assuré, numéro d'affiliation, prix, etc.) sont valides et présentes.
