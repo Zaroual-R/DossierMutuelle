@@ -8,10 +8,33 @@ Ce projet est une application batch développée avec **Spring Batch**, qui auto
 
 1. **Lecture des dossiers** :
    - Lecture des données JSON avec un `JsonItemReader`.
+
+2. **Validation des données** :
+   - Vérifie que les informations essentielles (nom de l'assuré, numéro d'affiliation, prix, etc.) sont valides et présentes.
+   - Vérifie que le prix de la consultation et le montant total des frais sont positifs.
+
+3. **Calcul des remboursements** :
+   - Remboursement basé sur le prix de la consultation.
+   - Calcul du remboursement des traitements en utilisant des médicaments référentiels.
+
+4. **Écriture des données** :
+   - Enregistrement des dossiers traités dans une base de données relationnelle.
+
+5. **Enchaînement des processeurs** :
+   - Validation des données (`ValidationProcessor`).
+   - Calcul du remboursement (`CalculProcessor`), incluant :
+     - `ConsultationProcessor` : Calcule le remboursement de la consultation.
+     - `TraitementMappingProcessor` : Mappe les traitements aux médicaments référentiels.
+     - `TraitementRemboursementProcessor` : Calcule les remboursements des médicaments.
+     - `TotalRemboursementProcessor` : Additionne les remboursements pour calculer le total.
+
 ## Structure des données
 
 ### Exemple de fichier JSON d'entrée
- ```json
+
+Voici un exemple de structure de fichier JSON pour l'entrée :
+
+```json
 {
   "nomAssure": "Ibrahimi",
   "numeroAffiliation": "AFF123456",
@@ -32,6 +55,7 @@ Ce projet est une application batch développée avec **Spring Batch**, qui auto
     }
   ]
 }
+
 
 2. **Validation des données** :
    - Vérifie que les informations essentielles (nom de l'assuré, numéro d'affiliation, prix, etc.) sont valides et présentes.
