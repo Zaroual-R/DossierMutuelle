@@ -19,43 +19,13 @@ Ce projet est une application batch développée avec **Spring Batch**, qui auto
 
 4. **Écriture des données** :
    - Enregistrement des dossiers traités dans une base de données relationnelle.
-
 5. **Enchaînement des processeurs** :
    - Validation des données (`ValidationProcessor`).
    - Calcul du remboursement (`CalculProcessor`), incluant :
      - `ConsultationProcessor` : Calcule le remboursement de la consultation.
      - `TraitementMappingProcessor` : Mappe les traitements aux médicaments référentiels.
      - `TraitementRemboursementProcessor` : Calcule les remboursements des médicaments.
-     - `TotalRemboursementProcessor` : Additionne les remboursements pour calculer le total.
-
-## Structure des données
-
-### Exemple de fichier JSON d'entrée
-
-Voici un exemple de structure de fichier JSON pour l'entrée :
-
-   ```bash
-  {
-  "nomAssure": "Ibrahimi",
-  "numeroAffiliation": "AFF123456",
-  "immatriculation": "IMM098765",
-  "lienParente": "fils",
-  "montantTotalFrais": 150.0,
-  "prixConsultation": 50.0,
-  "nombrePiecesJointes": 3,
-  "nomBeneficiaire": "Omar",
-  "dateDepotDossier": "2024-11-10",
-  "traitements": [
-    {
-      "codeBarre": "1234567890",
-      "existe": true,
-      "nomMedicament": "Paracétamol",
-      "typeMedicament": "Antalgique",
-      "prixMedicament": 5.0
-      }
-    ]
-  }
-
+     - `TotalRemboursementProcessor` : Additionne les remboursements pour calculer le total
 
 2. **Validation des données** :
    - Vérifie que les informations essentielles (nom de l'assuré, numéro d'affiliation, prix, etc.) sont valides et présentes.
