@@ -34,8 +34,8 @@ Ce projet est une application batch développée avec **Spring Batch**, qui auto
 
 Voici un exemple de structure de fichier JSON pour l'entrée :
 
-```json
-{
+   ```json
+  {
   "nomAssure": "Ibrahimi",
   "numeroAffiliation": "AFF123456",
   "immatriculation": "IMM098765",
@@ -52,9 +52,9 @@ Voici un exemple de structure de fichier JSON pour l'entrée :
       "nomMedicament": "Paracétamol",
       "typeMedicament": "Antalgique",
       "prixMedicament": 5.0
-    }
-  ]
-}
+      }
+    ]
+  }
 
 
 2. **Validation des données** :
