@@ -34,7 +34,7 @@ Ce projet est une application batch développée avec **Spring Batch**, qui auto
 
 Voici un exemple de structure de fichier JSON pour l'entrée :
 
-   ```json
+   ```bash
   {
   "nomAssure": "Ibrahimi",
   "numeroAffiliation": "AFF123456",
